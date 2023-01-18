@@ -40,6 +40,7 @@ int send_cmd(struct ub_io_ctrl *ub,unsigned char *msg_in,int stid)
   int i;
   int p;
   printf("send_cmd .... %x\n",stid);
+    printf("%s", msg_in);
   pp.type='D';
   pp.data[0]=0;
   pp.data[1]=0;
