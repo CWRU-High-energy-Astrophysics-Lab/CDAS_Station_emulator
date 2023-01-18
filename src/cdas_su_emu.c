@@ -40,7 +40,7 @@ int send_cmd(struct ub_io_ctrl *ub,unsigned char *msg_in,int stid)
   int i;
   int p;
   printf("send_cmd .... %x\n",stid);
-    printf("%s", msg_in);
+    printf("%s\n", msg_in);
   pp.type='D';
   pp.data[0]=0;
   pp.data[1]=0;
@@ -230,6 +230,7 @@ int main(int argc,char *argv[])
 
   while ((nsets=select(FD_SETSIZE, &in, NULL, NULL, &timeout))>=0){
     gettimeofday(&now,NULL);
+      memset(cl_msg,'\0',sizeof(cl_msg));
     if(nsets>0){
       if (ub.fd_in>0 && FD_ISSET (ub.fd_in, &in)) {
 	last_conn.tv_sec=now.tv_sec;
