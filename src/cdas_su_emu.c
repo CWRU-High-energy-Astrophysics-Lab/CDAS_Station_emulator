@@ -147,12 +147,11 @@ int data_from_ub(struct ub_io_ctrl *ub,struct cdas_emu_str *cdas,
 	    printf("======= new message ...: %02x %d %d %d\n",
 		   msg->type,msg->mess_id,msg->version,msg->nb);
 	    for(j=0;j<msg->nb;j++){
-	      printf("%02x%s",msg->msg[j],((j%10==9 || j+1==msg->nb)?"\n":" "));
+	      printf("%x%s",msg->msg[j],((j%10==9 || j+1==msg->nb)?"\n":" "));
 	    }
 	    printf("=================================\n");
 
-        if(msg->type==15){
-            for(j=0;j<msg->nb;j++){
+                    for(j=0;j<msg->nb;j++){
                 printf("%c%s",msg->msg[j],((j%10==9 || j+1==msg->nb)?"\n":" "));
             }
         }
