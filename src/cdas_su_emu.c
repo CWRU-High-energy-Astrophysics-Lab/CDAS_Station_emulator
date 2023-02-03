@@ -153,7 +153,7 @@ int data_from_ub(struct ub_io_ctrl *ub,struct cdas_emu_str *cdas,
 
 
             for(j=0;j<msg->nb;j++){
-                printf("%c%s",msg->msg[j],((msg->msg[j]==" " || j+1==msg->nb)?"\n":""));
+                printf("%c%s",msg->msg[j],((msg->msg[j]==32|| j+1==msg->nb)?"\n":""));
             }
 
 	  }
