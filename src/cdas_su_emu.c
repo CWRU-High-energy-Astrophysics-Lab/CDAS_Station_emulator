@@ -151,10 +151,11 @@ int data_from_ub(struct ub_io_ctrl *ub,struct cdas_emu_str *cdas,
 	    }
 	    printf("=================================\n");
 
-                    for(j=0;j<msg->nb;j++){
+
+            for(j=0;j<msg->nb;j++){
                 printf("%c%s",msg->msg[j],((j%10==9 || j+1==msg->nb)?"\n":" "));
             }
-        }
+
 	  }
 	}
       }
