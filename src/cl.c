@@ -23,10 +23,10 @@ main(int argc, char *argv[]) {
                 exit(0);
             }
             n = strlen(argv[2]);
-            msg[0] = 3 + n; /*3 is for:
+            msg[0] = 4 + n; /*3 is for:
 		    1 for the len,  
 		    1 for the command and
-		    1 for additional space
+		    2 for additional space
 		  */
             msg[1] = 'c';
             msg[2] = ' ';
